@@ -456,7 +456,7 @@ color: var(--primary-color);
 
 /* media query */
 
-@media (width:400px)
+@media ( max-width:767px)
 {
     .navigation{
         flex-direction: column;
