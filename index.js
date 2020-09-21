@@ -5,7 +5,9 @@ let name = document.getElementById("name");
 let contact = document.getElementById("contact");
 let email = document.getElementById("email");
 let btn = document.getElementById("btn");
+let msg = document.getElementById("msg");
 education.classList.add('display-no-block');
+msg.classList.add('display-no-block');
 activeTab.addEventListener("click", function (e) {
     e.preventDefault();
     let node = e.currentTarget.children[0].children[0]
@@ -54,9 +56,21 @@ btn.addEventListener("click", function (e) {
         body: JSON.stringify(obj)
     }).then(res => {
         console.log("suucess", res)
+        msg.classList.remove('display-no-block');
+        msg.classList.add('display-block')
     }).catch(err => {
         console.log("err", err)
-    })
+    }).finally(function () {
+        setTimeout(function () {
+
+            contact.value = '';
+            email.value = '';
+            contact.value = '';
+            name.value = '';
+            msg.classList.remove('display-block');
+            msg.classList.add('display-no-block');
+        }, 1000)
+    });
 
 
 })
