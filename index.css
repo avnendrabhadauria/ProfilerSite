@@ -227,15 +227,12 @@ padding: 10px ;
 
   }
 }
-#header .details .media{
-    height: 100px;
-}
 
 #header .details .media i {
     display: inline-block;
    padding: 10px;
-      animation: animationonmedia 3s 3s ease-in-out;
-      transition: all 1s ease-out;
+      animation: animationonmedia 3s 2s ease-in-out;
+
 }
 
 
@@ -250,7 +247,7 @@ padding: 10px ;
 #header .details .media i:hover{
 color: var(--primary-color);
 cursor: pointer;
-font-size: 3rem;
+
 
 }
 
@@ -497,9 +494,6 @@ color: var(--primary-color);
     #about .container>div:first-child>div:first-child{
         width: 100%;
     }
-    #header .details .media{
-    height: 50px;
-}
     #resume .container .resume-content
     {
         width: 100%;
