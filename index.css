@@ -211,7 +211,7 @@ padding: 10px ;
     height: 100px;
 }
 .details h1{
-     animation: animate 3s 5s ease-in-out infinite;
+     animation: animate 3s  ease-in-out infinite;
 }
 @keyframes animate {
   0% {
@@ -231,10 +231,10 @@ padding: 10px ;
 #header .details .media i {
     display: inline-block;
    padding: 10px;
-      animation: animationonmedia 3s 2s ease-in-out;
-
 }
-
+#header .details .media i{
+    animation: animationonmedia 3s 3s ease-in-out;
+}
 
 @keyframes animationonmedia{
     0%{
@@ -244,11 +244,9 @@ padding: 10px ;
         transform: rotateY(360deg);
     }
 }
-#header .details .media i:hover{
+#header .details .media :hover{
 color: var(--primary-color);
 cursor: pointer;
-
-
 }
 
 
