@@ -332,6 +332,7 @@ cursor: pointer;
     text-align: inherit;
 }
 #resume .container .resume-content >div:first-child{
+     text-align: inherit !important;
    display: flex;
    justify-content: space-between;
 }
@@ -510,6 +511,12 @@ color: var(--primary-color);
 
 @media ( max-width:767px)
 {
+    .logo{
+    
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+ 
+}
     .navigation{
         flex-direction: column;
     }
@@ -607,4 +614,38 @@ position: absolute; height: 10%; width: 10%;
     width: 100%;
     opacity: 0.8;
 }
+#resume .container .resume-content >div:first-child{
+    flex-direction: column;
+     text-align: left !important;
+}
+}
+
+@media ( max-width:350px)
+{
+@keyframes animate {
+  0% {
+   
+    font-size: 0.5rem;
+    opacity: 0.2;
+   
+  }
+  100% {
+  
+    font-size: 1rem;
+    opacity: 1;
+
+  }
+}
+.logo{
+    
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+ 
+}
+#navigation ul a{
+padding: 10px 5px ;
+ font-weight: bold;
+    font-size: 1rem;
+}
+
 }
