@@ -498,6 +498,19 @@ color: var(--primary-color);
     padding: 0.5rem;
     text-align: center;
 }
+.footer> p{
+     animation: stripes 5s linear infinite forwards ;
+     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  
+}
+@keyframes stripes {
+  0% {
+   color: var(--light-color);
+  }
+  100%{
+      color: var(--primary-color);
+  }
+}
 .footer .footericons i{
     padding: 8px;
 }
@@ -591,13 +604,13 @@ position: absolute; height: 10%; width: 10%;
 @keyframes animate {
   0% {
    
-    font-size: 1.3rem;
-    opacity: 0.2;
+    font-size: 1.5rem;
+    opacity: 0.1;
    
   }
   100% {
   
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     opacity: 1;
 
   }
@@ -631,8 +644,8 @@ position: absolute; height: 10%; width: 10%;
 @keyframes animate {
   0% {
    
-    font-size: 0.5rem;
-    opacity: 0.2;
+    font-size: 1rem;
+    opacity: 0.1;
    
   }
   100% {
