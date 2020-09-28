@@ -23,11 +23,11 @@
     margin:auto;
 }
 .display-block{
-visibility:block;
+display: block !important;
 }
 
 .display-no-block{
-visibility:hidden !important;
+display: none ;
 }
 .active{
     color: var(--primary-color)  !important;
@@ -212,7 +212,7 @@ padding: 10px ;
 }
 
 #msg{
-  margin:auto
+    margin-bottom: 10px;
 }
 #header .details >*{
     padding: 10px 20px;
@@ -645,7 +645,7 @@ position: absolute; height: 10%; width: 10%;
 }
 
 #msg{
-  margin:auto
+margin-bottom: 15px;
 
 }
 }
@@ -667,7 +667,7 @@ position: absolute; height: 10%; width: 10%;
   }
 }
 #msg{
-  margin:auto
+margin-bottom: 15px;
 
 }
 .logo{
