@@ -48,19 +48,35 @@ btn.addEventListener("click", function (e) {
 
     obj.Email = email.value;
     console.log("name", obj)
-    fetch("https://profiledetails-8823b.firebaseio.com/Details.json", {
-        method: 'post',
-        headers: {
-            "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-        },
-        body: JSON.stringify(obj)
-    }).then(res => {
-        console.log("suucess", res)
+    if (obj.Name.length > 0 && obj.Email.length > 0) {
+        fetch("https://profiledetails-8823b.firebaseio.com/Details.json", {
+            method: 'post',
+            headers: {
+                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+            },
+            body: JSON.stringify(obj)
+        }).then(res => {
+            console.log("suucess", res)
+            msg.classList.remove('display-no-block');
+            msg.classList.add('display-block')
+        }).catch(err => {
+            console.log("err", err)
+        }).finally(function () {
+            setTimeout(function () {
+
+                contact.value = '';
+                email.value = '';
+                contact.value = '';
+                name.value = '';
+                msg.classList.remove('display-block');
+                msg.classList.add('display-no-block');
+            }, 1000)
+        });
+    }
+    else {
+        msg.innerText = 'Name/Email (Manadatory field) is missing '
         msg.classList.remove('display-no-block');
-        msg.classList.add('display-block')
-    }).catch(err => {
-        console.log("err", err)
-    }).finally(function () {
+        msg.classList.add('display-block');
         setTimeout(function () {
 
             contact.value = '';
@@ -69,8 +85,11 @@ btn.addEventListener("click", function (e) {
             name.value = '';
             msg.classList.remove('display-block');
             msg.classList.add('display-no-block');
-        }, 1000)
-    });
+        }, 2000)
+
+    }
+
+
 
 
 })
