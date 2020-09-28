@@ -637,6 +637,11 @@ position: absolute; height: 10%; width: 10%;
     flex-direction: column;
      text-align: left !important;
 }
+
+#msg{
+margin-bottom: 10px;
+
+}
 }
 
 @media ( max-width:350px)
