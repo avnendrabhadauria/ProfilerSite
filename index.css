@@ -610,13 +610,13 @@ position: absolute; height: 10%; width: 10%;
 @keyframes animate {
   0% {
    
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     opacity: 0.1;
    
   }
   100% {
   
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     opacity: 1;
 
   }
