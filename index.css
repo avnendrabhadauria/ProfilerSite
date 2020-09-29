@@ -408,7 +408,7 @@ cursor: pointer;
 }
 .js{
     position: absolute;
-    left:45%;
+    left:35%;
     top:60%
 }
 .js i{
@@ -418,7 +418,7 @@ cursor: pointer;
 
 .html{
     position: absolute;
-    left:65%;
+    left:55%;
     top:40%
 }
 .html i{
@@ -428,7 +428,7 @@ cursor: pointer;
 
 .css{
     position: absolute;
-    left:80%;
+    left:70%;
     top:60%
 }
 .css i{
@@ -577,14 +577,20 @@ position: absolute; height: 10%; width: 10%;
 #contact .row{
     flex-direction: column;
 }
+.js{
+ 
+    left:25%;
+    top:70%
+ 
+}
 .html{
   
-    left:65%;
+    left:55%;
     top:25%
 }
 .react{
   
-    left:20%;
+    left:15%;
     top :10%;
 }
 .sass{
@@ -669,6 +675,11 @@ margin-bottom: 15px;
 #msg{
 margin-bottom: 15px;
 
+}
+.js{
+ 
+    left:15%;
+ 
 }
 .logo{
     
