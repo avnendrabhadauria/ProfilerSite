@@ -491,7 +491,8 @@ color: var(--primary-color);
     color: var(--dark-color);
 }
 .contact .form input:focus {
-    border: 2px  solid var(--primary-color);
+    /* border: 2px  solid var(--primary-color); */
+    outline: 2px  solid var(--primary-color);;
    
    
 } 
