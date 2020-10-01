@@ -222,6 +222,7 @@ padding: 10px ;
     height: 100px;
 }
 .details h1{
+    text-shadow: 2px 2px 5px;
      animation: animate 3s 1s ease-in-out infinite;
 }
 @keyframes animate {
