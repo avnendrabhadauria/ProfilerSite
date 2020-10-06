@@ -49,6 +49,7 @@ btn.addEventListener("click", function (e) {
     obj.Email = email.value;
     console.log("name", obj)
     if (obj.Name.length > 0 && obj.Email.length > 0) {
+        btn.style.opacity = 0.5;
         fetch("https://profiledetails-8823b.firebaseio.com/Details.json", {
             method: 'post',
             headers: {
@@ -71,6 +72,7 @@ btn.addEventListener("click", function (e) {
                 msg.classList.remove('display-block');
                 msg.classList.add('display-no-block');
             }, 1000)
+            btn.style.opacity = 1;
         });
     }
     else {
