@@ -147,6 +147,12 @@ a {
   font-size: 2rem;
 }
 
+/* Font Size*/
+
+.font-wght {
+  font-weight: bold;
+}
+
 /* Container */
 
 .container {
