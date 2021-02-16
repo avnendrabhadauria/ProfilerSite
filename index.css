@@ -3,7 +3,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px var(--grey-color);
+  box-shadow: inset 0 0 5px var(--primary-color);
   border-radius: 10px;
 }
 
@@ -514,6 +514,11 @@ a {
 }
 .footer p {
   font-size: 13px;
+}
+
+.columns {
+  margin-top: 22px;
+  margin-bottom: 10px;
 }
 
 /* media query */
