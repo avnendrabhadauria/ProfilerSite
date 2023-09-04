@@ -29,7 +29,9 @@
   --grey-color: #888;
   --semi-dark-color: #444;
 }
-
+body {
+  background: #000;
+}
 /* .border */
 
 .bottom-bdr {
