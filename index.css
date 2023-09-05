@@ -156,7 +156,7 @@ a {
 }
 #header {
   height: 100vh;
-  background: url("./asset/background.jpg") center center/cover no-repeat;
+  background: url("./asset/background.webp") center center/cover no-repeat;
   display: flex;
   flex-direction: column;
 }
