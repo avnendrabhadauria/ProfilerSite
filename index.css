@@ -450,7 +450,7 @@ a {
   bottom: 0px;
   left: 0px;
   content: "";
-  background: url("./asset//wave-top.png") no-repeat center center/cover;
+  background: url("./asset/wave-top.png") no-repeat center center/cover;
   height: 100%;
   width: 100%;
   opacity: 0.2;
