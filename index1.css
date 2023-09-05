@@ -1,34 +1,17 @@
-#header,
-#navigation,
-img {
-  width: 100%;
-}
-#resume .container,
-.details {
-  z-index: 1;
-}
-#header::after,
-#resume::after,
-#skills::after {
-  left: 0;
-  content: "";
-  height: 100%;
-}
-*,
-.footer {
-  text-align: center;
-}
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px var(--primary-color);
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--primary-color);
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--light-color);
 }
@@ -38,6 +21,7 @@ img {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
   color: #fff;
+  text-align: center;
   --primary-color: #e4c200;
   --alert-color: rgb(224, 36, 94);
   --dark-color: #333;
@@ -48,15 +32,19 @@ img {
 body {
   background: #000;
 }
+/* .border */
+
 .bottom-bdr {
   border-bottom: 4px dotted var(--primary-color);
 }
+
 .auto-margin {
   margin: auto;
 }
 .display-block {
   display: block !important;
 }
+
 .display-no-block {
   display: none;
 }
@@ -66,16 +54,23 @@ body {
 .shadow {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
+img {
+  width: 100%;
+}
+/* padding */
 .p1 {
   padding: 5px 10px;
 }
-#header .details > *,
 .p2 {
   padding: 10px 20px;
 }
+
 .p4 {
   padding: 40px 20px;
 }
+
+/* baggrounf \*/
+
 .light-bg {
   background: #fff;
 }
@@ -88,22 +83,22 @@ body {
 .primary-bg {
   background: var(--primary-color);
 }
+
+/* margins  */
+
 .mb-1 {
   margin-bottom: 5px;
 }
-#msg,
 .mb-2 {
   margin-bottom: 10px;
 }
-.footer .footericons i:hover,
+/* Colors */
 .primary-color {
   color: var(--primary-color);
 }
 .alert-color {
   color: var(--alert-color);
 }
-#contact .row,
-.contact .form input,
 .dark-color {
   color: var(--dark-color);
 }
@@ -116,12 +111,15 @@ body {
 .semi-dark-color {
   color: var(--semi-dark-color);
 }
+
 ul {
   list-style: none;
 }
 a {
   text-decoration: none;
 }
+
+/* Font Sizes */
 .font-bold-xxl {
   font-weight: 1500;
 }
@@ -137,8 +135,7 @@ a {
 .font-xxl {
   font-size: 3rem;
 }
-.font-xl,
-.logo {
+.font-xl {
   font-size: 2rem;
 }
 .font-lg {
@@ -147,22 +144,38 @@ a {
 .font-sm {
   font-size: 1.2rem;
 }
-.font-wght {
-  font-weight: 700;
+
+.logo {
+  font-size: 2rem;
 }
+
+/* Font Size*/
+
+.font-wght {
+  font-weight: bold;
+}
+
+/* Container */
+
 .container {
   max-width: 90%;
   margin: auto;
 }
+
+/* Header */
+
 #header {
   height: 100vh;
-  background: url("./asset/background.jpg") center center/cover no-repeat;
+  width: 100%;
+  background: url("./asset/background.jpg") no-repeat center center/cover;
   display: flex;
   flex-direction: column;
 }
 #navigation {
   position: fixed;
+  width: 100%;
   background: #333;
+
   z-index: 2;
 }
 .navigation {
@@ -175,42 +188,51 @@ a {
   display: flex;
   align-items: center;
 }
+
 #navigation ul a {
   padding: 10px;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 1rem;
 }
+
 #navigation ul a:hover {
   border-bottom: 2px solid var(--primary-color);
   cursor: pointer;
 }
+
 #header::after {
+  content: "";
   position: absolute;
-  top: 0;
+  top: 0px;
+  left: 0px;
+  height: 100%;
   width: 100%;
   background: #333;
   opacity: 0.7;
 }
-#resume,
-#resume .container,
-#skills,
-#skills > div,
 .details {
   position: relative;
-}
-.details {
+  z-index: 1;
+  /* padding: 20px ; */
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+#msg {
+  margin-bottom: 10px;
+}
+#header .details > * {
+  padding: 10px 20px;
+}
 .details > div:first-child {
   height: 100px;
 }
 .details h1 {
   text-shadow: 2px 2px 5px;
-  animation: 3s ease-in-out 1s infinite animate;
+  animation: animate 3s 1s ease-in-out infinite;
 }
 @keyframes animate {
   0% {
@@ -222,14 +244,18 @@ a {
     opacity: 1;
   }
 }
+
 #header .details .media i {
   display: inline-block;
   padding: 10px;
-  animation: 3s ease-in-out 3s animationonmedia;
 }
+#header .details .media i {
+  animation: animationonmedia 3s 3s ease-in-out;
+}
+
 @keyframes animationonmedia {
   0% {
-    transform: rotateY(0);
+    transform: rotateY(0deg);
   }
   100% {
     transform: rotateY(360deg);
@@ -239,10 +265,13 @@ a {
   color: var(--primary-color);
   cursor: pointer;
 }
+
+/* About section */
 #about {
   margin-top: 20px;
   border-radius: 20px;
 }
+
 #about .container {
   display: flex;
   align-items: center;
@@ -253,11 +282,16 @@ a {
   width: 45%;
   text-align: left;
 }
+
 #about .container > div:first-child > div:first-child {
   width: 70%;
-  margin: auto auto 30px;
+  margin: auto;
   box-shadow: 3px 3px 5px 6px #ccc;
+  margin-bottom: 30px;
 }
+#about .container > div:first-child {
+}
+
 #about .container .about-content > * {
   text-align: left;
   padding: 10px 20px;
@@ -265,11 +299,12 @@ a {
 #about .container .about-content span {
   padding: 15px 10px;
 }
-#resume::after,
-.html,
-.js,
-.react {
-  position: absolute;
+
+/* Resume */
+
+#resume .container {
+  position: relative;
+  z-index: 1;
 }
 #resume .container .resumedetails {
   display: flex;
@@ -287,16 +322,22 @@ a {
   width: 45.5%;
 }
 #resume .container .resumedetails a {
+  width: 100%;
   display: inline-block;
+}
+
+#resume .container .resumedetails a {
   padding: 5px 10px;
   width: 100%;
 }
+
 #resume .container .resume-content {
   position: relative;
   width: 70%;
   background: var(--light-color);
   text-align: left !important;
-  margin: 20px auto auto;
+  margin: auto;
+  margin-top: 20px;
   border-right: 2px solid var(--primary-color);
 }
 #resume .container .resume-content > * {
@@ -307,88 +348,116 @@ a {
   display: flex;
   justify-content: space-between;
 }
+
 #resume .container .resume-content .tag {
   position: absolute;
   height: 20%;
   width: 5%;
   top: 80%;
   left: 95.2%;
-  border-radius: 12px 0 0;
+  border-radius: 12px 0 0 0;
+}
+#resume {
+  position: relative;
 }
 #resume::after {
-  bottom: 0;
-  background: url("./asset/oranges.webp") center center/cover no-repeat;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  content: "";
+  background: url("./asset/oranges.png") no-repeat center center/cover;
+  height: 100%;
   width: 100%;
   opacity: 0.8;
 }
+
+/* skills */
+
 #skills {
+  position: relative;
   height: 500px;
   background: #333;
+  /* linear-gradient(to right, #333 , rgba(163, 212, 28, 0.267)) !important; */
 }
 #skills > div {
+  position: relative;
   height: 100%;
 }
 .react {
+  position: absolute;
   left: 30%;
   top: 15%;
 }
 .react i {
   color: #61dbdb;
-  animation: 5s ease-in-out infinite animate-tech;
+  animation: animate-tech 5s infinite ease-in-out;
 }
 @keyframes animate-tech {
   0% {
     font-size: 1.5rem;
     opacity: 0.1;
   }
+
   100% {
     font-size: 8rem;
+    /* transform: scale(4); */
     transform: rotateY(360deg);
     opacity: 1;
   }
 }
 .js {
+  position: absolute;
   left: 35%;
   top: 60%;
 }
 .js i {
   color: #f0db4f;
-  animation: 10s ease-in-out infinite animate-tech;
+  animation: animate-tech 10s infinite ease-in-out;
 }
+
 .html {
+  position: absolute;
   left: 55%;
   top: 40%;
 }
-.css,
-.sass {
-  top: 60%;
-  position: absolute;
-}
 .html i {
   color: #e44d26;
-  animation: 5s ease-in-out 3s infinite animate-tech;
+  animation: animate-tech 5s 3s infinite ease-in-out;
 }
+
 .css {
+  position: absolute;
   left: 70%;
+  top: 60%;
 }
 .css i {
   color: #2965f1;
-  animation: 5s ease-in-out 2s infinite animate-tech;
+  animation: animate-tech 5s 2s infinite ease-in-out;
 }
+
 .sass {
+  position: absolute;
   left: 10%;
+  top: 60%;
 }
 .sass i {
   color: #cd6799;
-  animation: 5s ease-in-out 1s infinite animate-tech;
+  animation: animate-tech 5s 1s infinite ease-in-out;
 }
+
 #skills::after {
   position: absolute;
-  bottom: 0;
-  background: url("./asset/wave-top.png") center center/cover no-repeat;
+  bottom: 0px;
+  left: 0px;
+  content: "";
+  background: url("./asset/wave-top.png") no-repeat center center/cover;
+  height: 100%;
   width: 100%;
   opacity: 0.2;
 }
+
+/* contact */
+
 .contact .form input {
   display: block;
   width: 100%;
@@ -399,25 +468,37 @@ a {
 }
 #contact .row {
   display: flex;
+  color: var(--dark-color);
   align-items: center;
 }
+
 .btn {
-  background: linear-gradient(to right, red, #ff0);
+  background: linear-gradient(to right, red, yellow);
 }
 .contact h2 {
   margin-bottom: 15px;
   font-size: 2.6rem;
   color: var(--primary-color);
 }
+
+.contact .form input {
+  color: var(--dark-color);
+}
 .contact .form input:focus {
+  /* border: 2px  solid var(--primary-color); */
   outline: 2px solid var(--primary-color);
 }
+
+/* footer */
+
 .footer {
   height: 5rem;
   padding: 0.5rem;
+  text-align: center;
 }
 .footer > p {
-  animation: 5s linear infinite forwards stripes;
+  animation: stripes 5s linear infinite forwards;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 @keyframes stripes {
   0% {
@@ -430,31 +511,47 @@ a {
 .footer .footericons i {
   padding: 8px;
 }
+.footer .footericons i:hover {
+  color: var(--primary-color);
+}
 .footer p {
   font-size: 13px;
 }
+
 .columns {
   margin-top: 22px;
   margin-bottom: 10px;
 }
+
+/* media query */
+
 @media (max-width: 767px) {
   .logo {
     font-size: 1.7rem;
     margin-bottom: 1rem;
   }
-  #about .container,
-  #contact .row,
-  #resume .container .resumedetails,
   .navigation {
     flex-direction: column;
   }
-  #about .container > div,
-  #about .container > div:first-child > div:first-child,
+
+  #about .container {
+    flex-direction: column;
+  }
+  #about .container > div {
+    width: 100%;
+  }
+  #about .container > div:first-child > div:first-child {
+    width: 100%;
+  }
   #resume .container .resume-content {
     width: 100%;
   }
+  #resume .container .resumedetails {
+    flex-direction: column;
+  }
   #resume .container .resumedetails > li {
     width: 100%;
+
     margin-bottom: 10px;
   }
   #resume .container .resumedetails > li:hover {
@@ -466,6 +563,9 @@ a {
     width: 10%;
     top: 90%;
     left: 91%;
+  }
+  #contact .row {
+    flex-direction: column;
   }
   .js {
     left: 25%;
@@ -488,6 +588,7 @@ a {
       font-size: 1.5rem;
       opacity: 0.1;
     }
+
     100% {
       font-size: 6rem;
       transform: rotateY(360deg);
@@ -512,6 +613,10 @@ a {
     font-size: 1rem !important;
   }
   #resume::after {
+    height: 17%;
+    width: 100%;
+  }
+  #resume::after {
     height: 100%;
     width: 100%;
     opacity: 0.8;
@@ -520,10 +625,12 @@ a {
     flex-direction: column;
     text-align: left !important;
   }
+
   #msg {
     margin-bottom: 15px;
   }
 }
+
 @media (max-width: 350px) {
   @keyframes animate {
     0% {
@@ -547,7 +654,7 @@ a {
   }
   #navigation ul a {
     padding: 10px 5px;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 1rem;
   }
 }
