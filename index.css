@@ -385,7 +385,7 @@ a {
 #skills::after {
   position: absolute;
   bottom: 0;
-  background: url("./asset/wave-top.png") center center/cover no-repeat;
+  background: url("./asset/wave-top.webp") center center/cover no-repeat;
   width: 100%;
   opacity: 0.2;
 }
