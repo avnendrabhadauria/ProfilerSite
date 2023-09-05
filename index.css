@@ -407,7 +407,7 @@ a {
 .contact h2 {
   margin-bottom: 15px;
   font-size: 2.6rem;
-  color: var(--primary-color);
+  color: var(--dark-color);
 }
 .contact .form input:focus {
   outline: 2px solid var(--primary-color);
