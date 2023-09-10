@@ -6,7 +6,562 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="React Senior Software Developer Profile (Javascript , React , html , css , redux)" />
     <title>Avnendra Bhadauria</title>
-    <link rel="stylesheet" href="./index.css">
+      <style>
+        #header,
+#navigation,
+img {
+  width: 100%;
+}
+#resume .container,
+.details {
+  z-index: 1;
+}
+#header::after,
+#resume::after,
+#skills::after {
+  left: 0;
+  content: "";
+  height: 100%;
+}
+*,
+.footer {
+  text-align: center;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--primary-color);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light-color);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  --primary-color: #e4c200;
+  --alert-color: rgb(224, 36, 94);
+  --dark-color: #333;
+  --light-color: #fff;
+  --grey-color: #888;
+  --semi-dark-color: #444;
+}
+body {
+  background: #000;
+}
+.bottom-bdr {
+  border-bottom: 4px dotted var(--primary-color);
+}
+.auto-margin {
+  margin: auto;
+}
+.display-block {
+  display: block !important;
+}
+.display-no-block {
+  display: none;
+}
+.active {
+  color: var(--primary-color) !important;
+}
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+.p1 {
+  padding: 5px 10px;
+}
+#header .details > *,
+.p2 {
+  padding: 10px 20px;
+}
+.p4 {
+  padding: 40px 20px;
+}
+.light-bg {
+  background: #fff;
+}
+.dark-bg {
+  background: var(--dark-color);
+}
+.light-dark-bg {
+  background: #e6e6e6;
+}
+.primary-bg {
+  background: var(--primary-color);
+}
+.mb-1 {
+  margin-bottom: 5px;
+}
+#msg,
+.mb-2 {
+  margin-bottom: 10px;
+}
+.footer .footericons i:hover,
+.primary-color {
+  color: var(--primary-color);
+}
+.alert-color {
+  color: var(--alert-color);
+}
+#contact .row,
+.contact .form input,
+.dark-color {
+  color: var(--dark-color);
+}
+.grey-color {
+  color: var(--grey-color);
+}
+.light-color {
+  color: var(--light-color);
+}
+.semi-dark-color {
+  color: var(--semi-dark-color);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.font-bold-xxl {
+  font-weight: 1500;
+}
+.font-bold-xl {
+  font-weight: 900;
+}
+.font-bold-lg {
+  font-weight: 500;
+}
+.font-light {
+  font-weight: 100;
+}
+.font-xxl {
+  font-size: 3rem;
+}
+.font-xl,
+.logo {
+  font-size: 2rem;
+}
+.font-lg {
+  font-size: 1.5rem;
+}
+.font-sm {
+  font-size: 1.2rem;
+}
+.font-wght {
+  font-weight: 700;
+}
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+#header {
+  height: 100vh;
+  background: url("./asset/background.webp") center center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+#navigation {
+  position: fixed;
+  background: #333;
+  z-index: 2;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  align-items: center;
+}
+#navigation ul {
+  display: flex;
+  align-items: center;
+}
+#navigation ul a {
+  padding: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+#navigation ul a:hover {
+  border-bottom: 2px solid var(--primary-color);
+  cursor: pointer;
+}
+#header::after {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: #333;
+  opacity: 0.7;
+}
+#resume,
+#resume .container,
+#skills,
+#skills > div,
+.details {
+  position: relative;
+}
+.details {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.details > div:first-child {
+  height: 100px;
+}
+.details h1 {
+  text-shadow: 2px 2px 5px;
+  animation: 3s ease-in-out 1s infinite animate;
+}
+@keyframes animate {
+  0% {
+    font-size: 2rem;
+    opacity: 0.2;
+  }
+  100% {
+    font-size: 3rem;
+    opacity: 1;
+  }
+}
+#header .details .media i {
+  display: inline-block;
+  padding: 10px;
+  animation: 3s ease-in-out 3s animationonmedia;
+}
+@keyframes animationonmedia {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+#header .details .media :hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+#about {
+  margin-top: 20px;
+  border-radius: 20px;
+}
+#about .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+#about .container > div {
+  width: 45%;
+  text-align: left;
+}
+#about .container > div:first-child > div:first-child {
+  width: 70%;
+  margin: auto auto 30px;
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+#about .container .about-content > * {
+  text-align: left;
+  padding: 10px 20px;
+}
+#about .container .about-content span {
+  padding: 15px 10px;
+}
+#resume::after,
+.html,
+.js,
+.react {
+  position: absolute;
+}
+#resume .container .resumedetails {
+  display: flex;
+  z-index: 1;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+#resume .container .resumedetails > li {
+  width: 49.5%;
+  transition: width 1s ease-in-out;
+}
+#resume .container .resumedetails > li:hover {
+  width: 45.5%;
+}
+#resume .container .resumedetails a {
+  display: inline-block;
+  padding: 5px 10px;
+  width: 100%;
+}
+#resume .container .resume-content {
+  position: relative;
+  width: 70%;
+  background: var(--light-color);
+  text-align: left !important;
+  margin: 20px auto auto;
+  border-right: 2px solid var(--primary-color);
+}
+#resume .container .resume-content > * {
+  text-align: inherit;
+}
+#resume .container .resume-content > div:first-child {
+  text-align: inherit !important;
+  display: flex;
+  justify-content: space-between;
+}
+#resume .container .resume-content .tag {
+  position: absolute;
+  height: 20%;
+  width: 5%;
+  top: 80%;
+  left: 95.2%;
+  border-radius: 12px 0 0;
+}
+#resume::after {
+  bottom: 0;
+  background: url("./asset/oranges.webp") center center/cover no-repeat;
+  width: 100%;
+  opacity: 0.8;
+}
+#skills {
+  height: 500px;
+  background: #333;
+}
+#skills > div {
+  height: 100%;
+}
+.react {
+  left: 30%;
+  top: 15%;
+}
+.react i {
+  color: #61dbdb;
+  animation: 5s ease-in-out infinite animate-tech;
+}
+@keyframes animate-tech {
+  0% {
+    font-size: 1.5rem;
+    opacity: 0.1;
+  }
+  100% {
+    font-size: 8rem;
+    transform: rotateY(360deg);
+    opacity: 1;
+  }
+}
+.js {
+  left: 35%;
+  top: 60%;
+}
+.js i {
+  color: #f0db4f;
+  animation: 10s ease-in-out infinite animate-tech;
+}
+.html {
+  left: 55%;
+  top: 40%;
+}
+.css,
+.sass {
+  top: 60%;
+  position: absolute;
+}
+.html i {
+  color: #e44d26;
+  animation: 5s ease-in-out 3s infinite animate-tech;
+}
+.css {
+  left: 70%;
+}
+.css i {
+  color: #2965f1;
+  animation: 5s ease-in-out 2s infinite animate-tech;
+}
+.sass {
+  left: 10%;
+}
+.sass i {
+  color: #cd6799;
+  animation: 5s ease-in-out 1s infinite animate-tech;
+}
+#skills::after {
+  position: absolute;
+  bottom: 0;
+  background: url("./asset/wave-top.webp") center center/cover no-repeat;
+  width: 100%;
+  opacity: 0.2;
+}
+.contact .form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+}
+#contact .row {
+  display: flex;
+  align-items: center;
+}
+.btn {
+  background: linear-gradient(to right, red, #ff0);
+}
+.contact h2 {
+  margin-bottom: 15px;
+  font-size: 2.6rem;
+  color: var(--dark-color);
+}
+.contact .form input:focus {
+  outline: 2px solid var(--primary-color);
+}
+.footer {
+  height: 5rem;
+  padding: 0.5rem;
+}
+.footer > p {
+  animation: 5s linear infinite forwards stripes;
+}
+@keyframes stripes {
+  0% {
+    color: var(--light-color);
+  }
+  100% {
+    color: var(--primary-color);
+  }
+}
+.footer .footericons i {
+  padding: 8px;
+}
+.footer p {
+  font-size: 13px;
+}
+.columns {
+  margin-top: 22px;
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .logo {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+  #about .container,
+  #contact .row,
+  #resume .container .resumedetails,
+  .navigation {
+    flex-direction: column;
+  }
+  #about .container > div,
+  #about .container > div:first-child > div:first-child,
+  #resume .container .resume-content {
+    width: 100%;
+  }
+  #resume .container .resumedetails > li {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #resume .container .resumedetails > li:hover {
+    width: 90%;
+  }
+  #resume .container .resume-content .tag {
+    position: absolute;
+    height: 10%;
+    width: 10%;
+    top: 90%;
+    left: 91%;
+  }
+  .js {
+    left: 25%;
+    top: 70%;
+  }
+  .html {
+    left: 55%;
+    top: 25%;
+  }
+  .react {
+    left: 15%;
+    top: 10%;
+  }
+  .sass {
+    left: 10%;
+    top: 40%;
+  }
+  @keyframes animate-tech {
+    0% {
+      font-size: 1.5rem;
+      opacity: 0.1;
+    }
+    100% {
+      font-size: 6rem;
+      transform: rotateY(360deg);
+      opacity: 1;
+    }
+  }
+  @keyframes animate {
+    0% {
+      font-size: 1.3rem;
+      opacity: 0.1;
+    }
+    100% {
+      font-size: 1.3rem;
+      opacity: 1;
+    }
+  }
+  .details > div:first-child {
+    height: 35px;
+    padding-bottom: 10px !important;
+  }
+  .details > p {
+    font-size: 1rem !important;
+  }
+  #resume::after {
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+  }
+  #resume .container .resume-content > div:first-child {
+    flex-direction: column;
+    text-align: left !important;
+  }
+  #msg {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 350px) {
+  @keyframes animate {
+    0% {
+      font-size: 1rem;
+      opacity: 0.1;
+    }
+    100% {
+      font-size: 1rem;
+      opacity: 1;
+    }
+  }
+  #msg {
+    margin-bottom: 15px;
+  }
+  .js {
+    left: 15%;
+  }
+  .logo {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  #navigation ul a {
+    padding: 10px 5px;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+}
+
+    </style>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet" >
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
         integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
